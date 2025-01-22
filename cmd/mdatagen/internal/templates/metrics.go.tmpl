@@ -10,6 +10,9 @@ import (
 	"time"
 
 	"go.opentelemetry.io/collector/component"
+	{{- if .ResourceAttributes }}
+	"go.opentelemetry.io/collector/filter"
+	{{- end }}
 	"go.opentelemetry.io/collector/pdata/pcommon"
 	"go.opentelemetry.io/collector/pdata/pmetric"
 	{{- if or isReceiver isScraper }}
